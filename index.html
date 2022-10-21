@@ -56,19 +56,29 @@
 
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" minlength="6" required>
+              <input type="password" class="form-control" id="password1" minlength="6" oninput="contraseña_igual()" required>
               <div class="invalid-feedback"> la contraseña tiene que tener al menos 6 caracteres </div>
             </div>
 
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" oninput="contraseña_igual()"  required>
-              <div class="invalid-feedback"> las contraseñas tienen que ser iguales </div>
+              <input type="password" class="form-control" id="password2" minlength="6"  oninput="contraseña_igual()"  required>
+              <div class="invalid-feedback"> las contraseñas tienen que ser iguales </div> 
             </div>
+
+
+
+
+
+
+
+
+
 
             <div class="col-sm-12">
               <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
                 data-bs-target="#modalTerminos">Términos del servicio</button>
+                <div class="invalid-feedback"> PUREBAAAAA </div> 
             </div>
 
 
@@ -103,7 +113,7 @@
         </div>
         <div class="modal-footer">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos">
+            <input type="checkbox" class="form-check-input" id="terminos" oninput="checkbox_1()">
             <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
           </div>
         </div>
