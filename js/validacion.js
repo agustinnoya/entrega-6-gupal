@@ -37,9 +37,13 @@ function contraseña_igual() {
     password1.classList.remove('is-invalid')
     password2.classList.remove('is-invalid')
   }
+  
+ 
 
 }
 */
+
+
 function contraseña_igual() {
   const pass1 = document.getElementById("password1").value;
   const pass2 = document.getElementById("password2").value;
@@ -51,16 +55,73 @@ function contraseña_igual() {
   }
 }
 
+
+function terminos_error() {
+
+  const valorcheck = document.getElementById("terminos").checked
+  const terminos_boton = document.getElementById("terminos_boton")
+ 
+  if (valorcheck) {
+  
+    terminos_boton.classList.add('is-valid');
+    terminos_boton.classList.remove('is-invalid');
+  } else {
+
+    terminos_boton.classList.remove('is-valid');
+    terminos_boton.classList.add('is-invalid');
+  }
+
+
+
+
+}
+
+
+
+function checkbox_2() {
+  const valorcheck = document.getElementById("terminos").checked
+
+  if (localStorage.getItem('checkcomprobacion')) {
+    if (valorcheck) {
+      document.getElementById("terminos").classList.add('is-valid');
+      document.getElementById("terminos").classList.remove('is-invalid');
+   
+    } else {
+      document.getElementById("terminos").classList.add('is-invalid');
+      document.getElementById("terminos").classList.remove('is-valid');
+    
+    }
+  }
+}
+
+function comprobarcheck() {
+  localStorage.setItem('checkcomprobacion', true)
+}
+
+
 function checkbox_1() {
   const valorcheck = document.getElementById("terminos").checked
+
+
 
   if (valorcheck) {
     document.getElementById("terminos").classList.add('is-valid');
     document.getElementById("terminos").classList.remove('is-invalid');
-    console.log("primer if")
+    
   } else {
     document.getElementById("terminos").classList.add('is-invalid');
     document.getElementById("terminos").classList.remove('is-valid');
-    console.log("segundo if")
+  
   }
+
+
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  localStorage.removeItem('checkcomprobacion')
+
+})
+

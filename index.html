@@ -76,13 +76,13 @@
 
 
             <div class="col-sm-12">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-                data-bs-target="#modalTerminos">Términos del servicio</button>
-                <div class="invalid-feedback"> PUREBAAAAA </div> 
+              <button type="button" class="btn btn-link ps-0 form" data-bs-toggle="modal"
+                data-bs-target="#modalTerminos" id="terminos_boton">Términos del servicio</button>
+                <div class="invalid-feedback">Debe aceptar los términos del servicio</div> 
             </div>
 
 
-            <button class="btn btn-primary" type="submit">Registrarme</button>
+            <button class="btn btn-primary" type="submit" onclick="checkbox_1(), comprobarcheck(), terminos_error()">Registrarme</button>
 
 
           </div>
@@ -113,7 +113,7 @@
         </div>
         <div class="modal-footer">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos" oninput="checkbox_1()">
+            <input type="checkbox" class="form-check-input" id="terminos" onclick="checkbox_2(), terminos_error()">
             <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
           </div>
         </div>
