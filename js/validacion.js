@@ -21,27 +21,6 @@
       }, false)
     })
 })()
-/** 
-function contraseña_igual() {
-  const password1 = document.getElementById(`password1`)
-  const password2 = document.getElementById(`password2`)
-
-  if (password1.value !== password2.value) {
-    password1.classList.add('is-invalid');
-    password2.classList.add('is-invalid');
-    password1.classList.remove('is-valid')
-    password2.classList.remove('is-valid')
-  } else {
-    password1.classList.add('is-valid');
-    password2.classList.add('is-valid');
-    password1.classList.remove('is-invalid')
-    password2.classList.remove('is-invalid')
-  }
-  
- 
-
-}
-*/
 
 
 function contraseña_igual() {
@@ -60,9 +39,9 @@ function terminos_error() {
 
   const valorcheck = document.getElementById("terminos").checked
   const terminos_boton = document.getElementById("terminos_boton")
- 
+
   if (valorcheck) {
-  
+
     terminos_boton.classList.add('is-valid');
     terminos_boton.classList.remove('is-invalid');
   } else {
@@ -70,13 +49,7 @@ function terminos_error() {
     terminos_boton.classList.remove('is-valid');
     terminos_boton.classList.add('is-invalid');
   }
-
-
-
-
 }
-
-
 
 function checkbox_2() {
   const valorcheck = document.getElementById("terminos").checked
@@ -85,11 +58,11 @@ function checkbox_2() {
     if (valorcheck) {
       document.getElementById("terminos").classList.add('is-valid');
       document.getElementById("terminos").classList.remove('is-invalid');
-   
+
     } else {
       document.getElementById("terminos").classList.add('is-invalid');
       document.getElementById("terminos").classList.remove('is-valid');
-    
+
     }
   }
 }
@@ -107,17 +80,13 @@ function checkbox_1() {
   if (valorcheck) {
     document.getElementById("terminos").classList.add('is-valid');
     document.getElementById("terminos").classList.remove('is-invalid');
-    
+
   } else {
     document.getElementById("terminos").classList.add('is-invalid');
     document.getElementById("terminos").classList.remove('is-valid');
-  
+
   }
-
-
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
